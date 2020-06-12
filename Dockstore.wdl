@@ -6,7 +6,7 @@ task calc_expression {
     echo "Aligning fastqs and calculating expression" > out_log.txt
     echo "Created output.transcript.bam and output_matrix.txt" >> out_log.txt
     echo "Creating qc matrix" >> out_log.txt
-    ls -l /cromwell_root/* >> out_log.txt
+    ls -l /*/* >> out_log.txt
   }
   runtime {
     docker: "ubuntu"
