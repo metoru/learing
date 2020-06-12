@@ -1,11 +1,13 @@
 task calc_expression {
   String left_fastq
   String right_fastq
+  File infile
 
   command {
     echo "Aligning fastqs and calculating expression" > out_log.txt
     echo "Created output.transcript.bam and output_matrix.txt" >> out_log.txt
     echo "Creating qc matrix" >> out_log.txt
+    ls ${infile}
     ls -l /*/* >> out_log.txt
   }
   runtime {
